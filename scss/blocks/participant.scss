@@ -39,7 +39,7 @@
 
 .participate__title {
   width: fit-content;
-  margin-bottom: 150px;
+  margin-bottom: 82px;
   font-size: 80px;
   line-height: 93%;
   text-transform: uppercase;
@@ -123,7 +123,7 @@
       width: 194px;
       height: 55px;
       background-color: #000;
-      opacity: 0.5;
+      opacity: 0.25;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -224,6 +224,9 @@
     padding-bottom: 16px;
     border-radius: 13px;
   }
+  @media screen and (max-width: 500px) {
+    background-size: 100% 100%;
+  }
 
   &::before {
     content: "";
@@ -301,6 +304,7 @@
       width: 123px;
       height: 34px;
       font-size: 11px;
+      border: none;
     }
 
     &:hover {

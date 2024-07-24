@@ -14,6 +14,7 @@
 }
 
 .header__top {
+  margin-bottom: 17px;
   display: none;
   font-family: var(--second-family);
   font-weight: 600;
@@ -53,6 +54,7 @@
   text-align: center;
   color: #94cbff;
   transform: rotate(90deg);
+  translate: -25% 0;
 
   @media screen and (max-width: 1079px) {
     font-size: 12px;

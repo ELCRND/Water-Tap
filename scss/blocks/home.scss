@@ -87,11 +87,6 @@
     &:hover {
       scale: 1.1;
     }
-
-    &:last-of-type {
-      user-select: none;
-      pointer-events: none;
-    }
   }
 }
 
@@ -107,6 +102,8 @@
   @media screen and (max-width: 1079px) {
     grid-row: 1 / 2;
     margin-bottom: 51px;
+    line-height: 163%;
+    letter-spacing: -0.03em;
     font-size: 18px;
     text-align: center;
   }
