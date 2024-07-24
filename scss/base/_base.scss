@@ -1,9 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Jockey+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@font-face {
+  font-family: "Melon Qatar";
+  src: url("../public/fonts/melonqatarregular.ttf");
+}
+@font-face {
+  font-family: "Merge One";
+  src: url("../public/fonts/MergeOne-Regular.ttf");
+}
 
 :root {
-  --font-family: "Jockey One", sans-serif;
-  --second-family: "Roboto", sans-serif;
-  --third-family: "Montserrat", sans-serif;
+  --font-family: "Melon Qatar", sans-serif;
+  --second-family: "Merge One", sans-serif;
+  --third-family: "Manrope", sans-serif;
 }
 
 * {
@@ -16,8 +25,7 @@ html {
 
 body {
   font-family: var(--font-family);
-  color: #fff;
-  position: relative;
+  color: #000;
 }
 
 .scroll-off {
@@ -30,7 +38,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 1);
   border-radius: 24px;
   position: fixed;
   top: 10%;
@@ -40,6 +48,8 @@ body {
   display: none;
   transition: all 400ms ease;
   z-index: 21;
+  font-family: var(--second-family);
+  color: #fff;
 }
 
 .tooltip.visible {

@@ -1,36 +1,61 @@
 .header {
   width: 100%;
+  padding-left: 46px;
+  padding-right: 46px;
   position: absolute;
-  top: 90px;
-  left: 0;
+  top: 47px;
   z-index: 10;
 
   @media screen and (max-width: 1079px) {
-    top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    top: 14px;
   }
 }
 
-.header__container {
-  width: min(1140px, 100%);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 25px;
-  padding-right: 25px;
+.header__top {
+  display: none;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 15px;
+
+  @media screen and (max-width: 1079px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header__bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .header__title {
-  font-family: var(--third-family);
-  font-weight: 700;
-  font-size: 26px;
-  text-transform: uppercase;
+  font-size: 79px;
+  line-height: 129%;
+  letter-spacing: -0.02em;
   text-align: center;
-  color: #fff;
+  color: #000;
 
   @media screen and (max-width: 1079px) {
-    font-size: 26px;
+    font-size: 44px;
+  }
+}
+
+.header__subtitle {
+  margin-right: auto;
+  font-family: var(--second-family);
+  font-size: 22px;
+  line-height: 129%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #94cbff;
+  transform: rotate(90deg);
+
+  @media screen and (max-width: 1079px) {
+    font-size: 12px;
   }
 }
 
@@ -38,62 +63,27 @@
   @media screen and (max-width: 1079px) {
     display: none;
   }
-}
 
-.navigation__list {
-  display: flex;
-  gap: 40px;
-  font-size: 20px;
-  line-height: 105%;
-  text-transform: uppercase;
-  text-align: center;
-  color: #fff;
+  ol {
+    border: 1px solid #252525;
+    padding: 8px;
+    display: flex;
+    gap: 12px;
 
-  .navigation__link {
-    position: relative;
+    a {
+      display: block;
+      padding: 7px 15px;
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 18px;
+      color: #252525;
+      transition: color 200ms ease, background-color 200ms ease;
 
-    &:before {
-      content: "";
-      width: 0;
-      height: 3px;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      background-color: #fff;
-      transition: all 200ms ease;
-    }
-    &:hover {
-      &:before {
-        width: 100%;
-        left: 0;
+      &:hover {
+        background-color: #94cbff;
+        color: #fff;
       }
     }
-  }
-}
-
-.header__btn {
-  width: 156px;
-  height: 45px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  font-size: 20px;
-  line-height: 105%;
-  text-transform: uppercase;
-  color: #062649;
-  transition: filter 200ms ease;
-
-  &:hover {
-    filter: brightness(0.7);
-  }
-  &:active {
-    filter: brightness(1);
-  }
-
-  @media screen and (max-width: 1079px) {
-    display: none;
   }
 }
 
@@ -107,26 +97,16 @@
   top: -200vh;
   left: 0;
   z-index: 20;
-  background-color: #151a1f;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   transition: all 500ms ease;
-
-  &::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-image: url("../public/img/roadmap/roadmap_bg_effect_mobile.png");
-    background-size: cover;
-    opacity: 0.3;
-  }
+  background-image: url("../public/img/about/about_bg.jpg");
+  background-size: cover;
+  font-family: var(--second-family);
 }
 
 .header__menu.visible {
-  top: -30px;
+  top: 0;
 }
 
 .menu__list {
@@ -138,11 +118,11 @@
 }
 
 .header__menu-btn {
-  width: 20px;
+  width: 62px;
   display: none;
   flex-direction: column;
   align-items: end;
-  gap: 3px;
+  gap: 16px;
   position: relative;
   z-index: 21;
 
@@ -152,26 +132,25 @@
 
   div {
     width: 100%;
-    height: 3px;
-    background-color: #fff;
+    height: 2px;
+    background-color: #94cbff;
     border-radius: 10px;
     transition: all 200ms ease;
-
-    &:first-of-type {
-      width: 14px;
-    }
   }
 }
 
 .header__menu-btn.close {
   div {
-    background-color: #fff;
     &:nth-of-type(1) {
       width: 100%;
       rotate: 45deg;
+      translate: 0 9px;
     }
     &:nth-of-type(2) {
-      translate: 0 -6px;
+      display: none;
+    }
+    &:nth-of-type(3) {
+      translate: 0 -9px;
       rotate: -45deg;
     }
   }
