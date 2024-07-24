@@ -1,179 +1,112 @@
 .buy {
-  padding-top: 90px;
-  padding-bottom: 237px;
-  background: #232930;
+  padding-bottom: 114px;
   position: relative;
-  z-index: 0;
+  z-index: 1;
 
   @media screen and (max-width: 1079px) {
-    padding-bottom: 277px;
-  }
-  @media screen and (max-width: 768px) {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-
-  &::before {
-    content: "";
-    width: 100%;
-    height: 147px;
-    position: absolute;
-    bottom: 0;
-    background-image: linear-gradient(
-      #e2001d 0px 57px,
-      #fff 57px 90px,
-      #e2001d 90px 147px
-    );
-
-    @media screen and (max-width: 768px) {
-      height: 110px;
-      background-image: linear-gradient(
-        #e2001d 0px 40px,
-        #fff 40px 70px,
-        #e2001d 70px 110px
-      );
-    }
+    padding-bottom: 45px;
   }
 }
 
 .buy__container {
-  width: min(1020px, 100%);
+  width: min(1310px, 100%);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 44px;
-  }
-}
-
-.buy__text {
-  grid-column: 2 / 3;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .buy__title {
-  margin-bottom: 44px;
-  font-size: 78px;
-  line-height: 110%;
-  color: #fff;
+  margin-bottom: 102px;
+  font-size: 80px;
+  line-height: 93%;
+  text-transform: uppercase;
+  color: #3faae8;
 
   @media screen and (max-width: 1079px) {
-    font-size: 42px;
-  }
-  @media screen and (max-width: 768px) {
-    margin-bottom: 36px;
+    margin-bottom: 43px;
+    font-size: 52px;
     text-align: center;
   }
 }
 
 .buy__steps {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+  margin-bottom: 55px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
 
-  @media screen and (max-width: 768px) {
-    gap: 34px;
+  @media screen and (max-width: 1079px) {
+    width: fit-content;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
   }
 
   li {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 8px;
+    padding: 30px 18px;
+    border: 1px solid #000;
 
-    @media screen and (max-width: 768px) {
-      gap: 6px;
-    }
-
-    b {
-      grid-row: 1 / 3;
-      grid-column: 1 / 2;
-      width: fit-content;
-      font-size: 50px;
-      line-height: 105%;
-      text-transform: uppercase;
-      color: #fff;
-
-      @media screen and (max-width: 768px) {
-        font-size: 24px;
-      }
+    @media screen and (max-width: 1079px) {
+      padding: 24px 15px;
     }
 
     h3 {
-      grid-row: 1 / 2;
-      grid-column: 2 / 3;
-      font-size: 26px;
-      line-height: 105%;
-      text-transform: uppercase;
-      color: #fff;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--second-family);
+      font-size: 31px;
+      color: #000;
 
-      @media screen and (max-width: 768px) {
-        font-size: 22px;
+      @media screen and (max-width: 1079px) {
+        width: fit-content;
+        margin-bottom: 33px;
+        font-size: 26px;
       }
     }
 
-    span {
-      grid-row: 2 / 3;
-      grid-column: 2 / 3;
-      font-size: 22px;
-      line-height: 105%;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.4);
+    p {
+      font-family: var(--second-family);
+      font-size: 18px;
+      line-height: 180%;
+      color: #000;
 
-      @media screen and (max-width: 768px) {
-        max-width: 306px;
-        font-size: 16px;
-      }
-
-      a {
-        color: rgba(255, 255, 255, 0.9);
-        position: relative;
-        transition: filter 200ms ease;
-        z-index: 1;
-
-        &:before {
-          content: url("../public/img/buy/buy_strokes.png");
-          position: absolute;
-          bottom: -6px;
-          left: 0;
-          z-index: -1;
-          opacity: 0.3;
-          translate: -5% 0;
-
-          @media screen and (max-width: 768px) {
-            scale: 0.7;
-            translate: -18% 0;
-          }
-        }
-
-        &:hover {
-          filter: brightness(0.7);
-        }
-        &:active {
-          filter: brightness(1);
-        }
+      @media screen and (max-width: 1079px) {
+        max-width: 344px;
+        font-size: 15px;
       }
     }
   }
 }
 
-.buy__img {
-  position: absolute;
-  top: 74px;
+.buy__btn {
+  width: 241px;
+  height: 55px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #000;
+  transition: box-shadow 200ms ease;
 
-  @media screen and (max-width: 768px) {
-    position: relative;
-    top: 0;
-    z-index: 1;
+  @media screen and (max-width: 1079px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    img {
-      width: 263px;
-      height: 554px;
-    }
+  &:hover {
+    box-shadow: 0 0 10px #ccc inset;
+  }
+  &:active {
+    box-shadow: 0 0 2px #ccc inset;
   }
 }

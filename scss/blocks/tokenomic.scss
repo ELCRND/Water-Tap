@@ -1,0 +1,122 @@
+.tokenomic {
+  padding-top: 246px;
+  padding-bottom: 322px;
+  position: relative;
+
+  @media screen and (max-width: 1079px) {
+    padding-top: 52px;
+    padding-bottom: 108px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.tokenomic__container {
+  width: min(970px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 84px 66px;
+  border: 1px solid #000;
+  display: flex;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+
+  @media screen and (max-width: 1079px) {
+    padding: 15px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.tokenomic__title {
+  margin-bottom: 90px;
+  font-size: 80px;
+  line-height: 93%;
+  text-transform: uppercase;
+  color: #000;
+
+  @media screen and (max-width: 1079px) {
+    margin-bottom: 340px;
+    font-size: 52px;
+    color: #3faae8;
+    text-align: center;
+  }
+}
+
+.tokenomic__statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+
+  @media screen and (max-width: 1079px) {
+    align-items: center;
+    gap: 38px;
+  }
+
+  h3 {
+    display: flex;
+    gap: 8px;
+    font-family: var(--second-family);
+    font-size: 33px;
+    text-transform: uppercase;
+    color: #000;
+    text-wrap: nowrap;
+
+    @media screen and (max-width: 1079px) {
+      font-size: 27px;
+    }
+
+    span {
+      color: #3faae8;
+    }
+  }
+
+  & > li > span {
+    font-family: var(--second-family);
+    font-size: 18px;
+    color: #000;
+
+    @media screen and (max-width: 1079px) {
+      font-size: 15px;
+      text-align: center;
+      display: block;
+    }
+  }
+}
+
+.tokenomic__img {
+  @media screen and (max-width: 1079px) {
+    width: 273px;
+    position: absolute;
+    top: 88px;
+    left: 50%;
+    translate: -50% 0;
+  }
+}
+
+.tokenomic__lines {
+  @media screen and (max-width: 540px) {
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    translate: 0 45%;
+    background-image: url("../public/img/tokenomic/tokenomic_lines_mobile.png");
+    background-size: cover;
+  }
+
+  & > img {
+    min-width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    translate: 0 26.5%;
+    z-index: 0;
+
+    @media screen and (max-width: 540px) {
+      display: none;
+    }
+  }
+}
