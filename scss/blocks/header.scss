@@ -1,0 +1,178 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  z-index: 10;
+
+  @media screen and (max-width: 1079px) {
+    top: 30px;
+  }
+}
+
+.header__container {
+  width: min(1140px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__title {
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+
+  @media screen and (max-width: 1079px) {
+    font-size: 26px;
+  }
+}
+
+.header__navigation {
+  @media screen and (max-width: 1079px) {
+    display: none;
+  }
+}
+
+.navigation__list {
+  display: flex;
+  gap: 40px;
+  font-size: 20px;
+  line-height: 105%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+
+  .navigation__link {
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 0;
+      height: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      background-color: #fff;
+      transition: all 200ms ease;
+    }
+    &:hover {
+      &:before {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+}
+
+.header__btn {
+  width: 156px;
+  height: 45px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+  line-height: 105%;
+  text-transform: uppercase;
+  color: #062649;
+  transition: filter 200ms ease;
+
+  &:hover {
+    filter: brightness(0.7);
+  }
+  &:active {
+    filter: brightness(1);
+  }
+
+  @media screen and (max-width: 1079px) {
+    display: none;
+  }
+}
+
+.header__menu {
+  width: 100%;
+  height: 100vh;
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -200vh;
+  left: 0;
+  z-index: 20;
+  background-color: #151a1f;
+  color: #fff;
+  transition: all 500ms ease;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("../public/img/roadmap/roadmap_bg_effect_mobile.png");
+    background-size: cover;
+    opacity: 0.3;
+  }
+}
+
+.header__menu.visible {
+  top: -30px;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  font-size: 32px;
+  text-transform: capitalize;
+}
+
+.header__menu-btn {
+  width: 20px;
+  display: none;
+  flex-direction: column;
+  align-items: end;
+  gap: 3px;
+  position: relative;
+  z-index: 21;
+
+  @media screen and (max-width: 1079px) {
+    display: flex;
+  }
+
+  div {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 200ms ease;
+
+    &:first-of-type {
+      width: 14px;
+    }
+  }
+}
+
+.header__menu-btn.close {
+  div {
+    background-color: #fff;
+    &:nth-of-type(1) {
+      width: 100%;
+      rotate: 45deg;
+    }
+    &:nth-of-type(2) {
+      translate: 0 -6px;
+      rotate: -45deg;
+    }
+  }
+}
